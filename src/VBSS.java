@@ -1,8 +1,5 @@
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.Map;
-import java.util.TreeSet;
+import java.util.*;
 
 public class VBSS {
 
@@ -21,15 +18,12 @@ public class VBSS {
             //System.out.println(currCity);
             double[][] probabilities = calculateProbabilities(cities,currCity,bias);
 
-            TreeSet<Double> probabilitiesSet = new TreeSet<Double>((a,b) -> Double.compare(a,b));
-
             HashMap<Double,Integer> probabilityIntervalToCity = new HashMap<>();
             double probabilitiesInterval = 0;
             for(double[] probability : probabilities){
                 //System.out.println("interval: " + probabilitiesInterval + ", city: " + probability[0]);
                 //System.out.println("city: " + probability[0] + ", probability: " + probability[1]);
                 probabilityIntervalToCity.put(probabilitiesInterval,(int)probability[0]);
-                probabilitiesSet.add(probabilitiesInterval);
                 probabilitiesInterval += probability[1];
             }
 //            for(double probability : probabilitiesSet){
