@@ -47,11 +47,14 @@ public class VBSS {
 
         }
 
-        System.out.println("Cost: " + bestCost);
+
         System.out.println("Tour: ");
         for(Integer city : bestTour){
             System.out.println(city);
         }
+
+        System.out.println("Cost: " + bestCost);
+        System.out.println("Confirmed Cost: " + computeCost(bestTour,cities));
 
     }
 
@@ -103,7 +106,15 @@ public class VBSS {
                 (city1[1] - city2[1])*(city1[1] - city2[1]));
     }
 
+    public static int computeCost(LinkedList<Integer> tour, HashMap<Integer,double[]> cities){
+        int cost = 0;
+        int prev = tour.getLast();
+        for(int city : tour){
+            cost += (int)Math.round(distance(cities.get(prev),cities.get(city)));
+            prev = city;
+        }
+        return cost;
+    }
 
 
-    //Note to self: use treeset; we can use floor func from it
 }

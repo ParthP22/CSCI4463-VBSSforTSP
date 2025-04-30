@@ -8,7 +8,7 @@ public class TSPFileParser {
 
         File tspFile = new File(filename);
 
-        FileReader fileReader = new FileReader("./tsp_instances/" + tspFile);
+        FileReader fileReader = new FileReader(tspFile);
         BufferedReader bufferedReader = new BufferedReader(fileReader);
 
         String line = bufferedReader.readLine();
