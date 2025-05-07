@@ -11,10 +11,10 @@ import java.util.Map;
 public class Main {
     public static void main(String[] args) throws IOException {
         //args[0] = TSP filename
-        //args[1] = b-parameter value for VBSS (default value = 10.0)
+        //args[1] = bias value for VBSS (default value = 10.0)
         //args[2] = number of total iterations of VBSS (default value = 1000)
 
-        // In case the b-parameter value or number of total iterations aren't
+        // In case the bias value or number of total iterations aren't
         // specified, then we'll just leave them as empty strings.
         String[] arguments = {"","",""};
         for(int i = 0; i < args.length; i++){
