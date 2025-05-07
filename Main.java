@@ -11,9 +11,16 @@ import java.util.Map;
 public class Main {
     public static void main(String[] args) throws IOException {
         //args[0] = TSP filename
-        //args[1] = b-parameter value for VBSS
-        //args[2] = number of total iterations of VBSS
+        //args[1] = b-parameter value for VBSS (default value = 10.0)
+        //args[2] = number of total iterations of VBSS (default value = 1000)
 
-        VBSS.doVBSS(args[0],args[1],args[2]);
+        // In case the b-parameter value or number of total iterations aren't
+        // specified, then we'll just leave them as empty strings.
+        String[] arguments = {"","",""};
+        for(int i = 0; i < args.length; i++){
+            arguments[i] = args[i];
+        }
+
+        VBSS.doVBSS(arguments[0],arguments[1],arguments[2]);
     }
 }
