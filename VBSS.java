@@ -107,12 +107,12 @@ public class VBSS {
             }
         }
 
-        // After the iterations are complete, we print the best tour in space-delimited format.
-        System.out.println("Tour: ");
+        // After the iterations are complete, we print the best tour in new-line-delimited format.
+        System.out.println(bestCost);
         for(Integer city : bestTour){
             System.out.println(city);
         }
-        System.out.println("Cost: " + bestCost);
+
     }
 
     /**
