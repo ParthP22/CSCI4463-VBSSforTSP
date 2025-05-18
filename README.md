@@ -1,6 +1,6 @@
 # CSCI4463-VBSSforTSP
 
-Implemented VBSS to solve the TSP for a given .tsp file. Final homework assignment of the Stockton University's Artificial Intelligence (CSCI 4463) course.
+Implemented VBSS to solve the TSP for a given .tsp file. Final homework assignment of Stockton University's Artificial Intelligence (CSCI 4463) course.
 
 To run on command line do: java Main [TSP filename with .tsp] [bias] [iterations]
 
